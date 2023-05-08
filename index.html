@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day11 | DIY</title>
+    <link rel="stylesheet" href="day11.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">
+            <h4>e1</h4>
+        </div>
+        <div class="btn">
+            <button type="button">Login</button>
+            <button type="button">create account</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filter">
+            
+           
+                <h2>Filters</h2>
+                
+           
+
+            <div class="content" ondblclick="dbclk()">
+
+                <div class="select">
+                    <h3>Select Location</h3>
+                    <select name="location" id="select">
+                        <option value="mm" selected disabled>Select Location</option>
+                        <option value="mm">Mumbai</option>
+                        <option value="mm">Pune</option>
+                        <option value="mm">Thane</option>
+                        <option value="mm">Lonawala</option>
+                    </select>
+                </div>
+
+                <div class="chbx">
+                    <h3>Cuisine</h3>
+                    <div class="check">
+                        <div><input type="checkbox"> North India</div>
+                        <div> <input type="checkbox"> South India</div>
+                        <div> <input type="checkbox"> Chines</div>
+                        <div><input type="checkbox"> Fast Food</div>
+                        <div><input type="checkbox"> Street Food</div>
+                    </div>
+                </div>
+
+                <div class="cost">
+                    <h3>Cost for two</h3>
+                    <div class="rdo">
+                        <div><input type="radio" name="s"> Less than Rs.500 </div>
+                        <div> <input type="radio" name="s"> Rs.500 to Rs.1000</div>
+                        <div> <input type="radio" name="s"> Rs.1000 to Rs.1500</div>
+                        <div><input type="radio" name="s"> Rs.1500 to Rs.2000</div>
+                        <div><input type="radio" name="s"> Rs.2000+</div>
+
+                    </div>
+                </div>
+
+                <div class="cost1">
+                    <h3>Sort</h3>
+                    <div class="rdo">
+                        <div><input type="radio" name="sn"> Price low to high</div>
+                        <div><input type="radio" name="sn"> Price high to low</div>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <i class="fa-solid fa-angle-down icon1"></i>
+            <i class="fa-solid fa-angle-up icon2"></i>
+        </div>
+        <div class="result">
+            <div class="card1">
+                <div class="upper">
+                    <img src="./snacks.jpg" alt="">
+                    <div class="content" >
+                        <h1>The Big Chili cake</h1>
+                        <h4>FORT</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div class="content">
+                        <p>CUISINES:&nbsp; <span>Bakery</span></p>
+                    <p>COST FOR: <span>&#8377;700 </span></p>
+                    <p>TWO</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1">
+                <div class="upper">
+                    <img src="./snacks.jpg" alt="">
+                    <div class="content">
+                        <h1>The Big Chili cake</h1>
+                        <h4>FORT</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur.</p>
+                    </div>
+                </div>
+                <div class="lower">
+                    <div class="content">
+                        <p>CUISINES:&nbsp; <span>Bakery</span></p>
+                    <p>COST FOR: <span>&#8377;700 </span></p>
+                    <p>TWO</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card2">
+                <div class="number"><</div>
+                <div class="number">1</div>
+                <div class="number">2</div>
+                <div class="number">3</div>
+                <div class="number">4</div>
+                <div class="number">5</div>
+                <div class="number">></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+   
+    let filter = document.querySelector('.icon1');
+    filter.addEventListener('click',()=>{
+        console.log('hiii');
+        let content = document.querySelector('.content');
+        // console.log(content);
+        content.style.display="block";
+        let icon = document.querySelector('.icon1');
+        icon.style.display="none";
+        let icon2 = document.querySelector('.icon2');
+        console.log(icon2);
+        icon2.style.display="block";
+
+    });
+
+    const icon2 = document.querySelector('.icon2');
+    console.log(icon2);
+    icon2.addEventListener('click',()=>{
+        let content = document.querySelector('.content');
+        console.log(content);
+        content.style.display="none";
+
+        let icon = document.querySelector('.icon2');
+        icon.style.display="none";
+        let icon2 = document.querySelector('.icon1');
+        console.log(icon2);
+        icon2.style.display="block";
+    })
+
+
+</script>
+
+</html>
